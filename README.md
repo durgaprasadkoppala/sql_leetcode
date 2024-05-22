@@ -1,2 +1,2 @@
 # sql_leetcode
-SQL Leetcode problems and solutions
+SQL 50 Leetcode problems and solutions
