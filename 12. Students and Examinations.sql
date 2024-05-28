@@ -108,3 +108,15 @@ Alice attended the Math exam 3 times, the Physics exam 2 times, and the Programm
 Bob attended the Math exam 1 time, the Programming exam 1 time, and did not attend the Physics exam.
 Alex did not attend any exams.
 John attended the Math exam 1 time, the Physics exam 1 time, and the Programming exam 1 time.
+
+
+
+
+Solution:
+
+select s.student_id, s.student_name, sub.subject_name, count(e.subject_name) as attended_exams
+from 
+students s join subjects sub left join examinations e
+on s.student_id=e.student_id and sub.subject_name=e.subject_name
+group by s.student_id, s.student_name, sub.subject_name
+order by s.student_id, sub.subject_name
